@@ -1,19 +1,19 @@
 <section data-ng-controller="ExamsController" data-ng-init="find()">
     <div class="page-header">
-        <h1>Exams</h1>
+        <h1>Exames</h1>
     </div>
     <div class="list-group">
         <a data-ng-repeat="exam in exams" data-ng-href="#!/exams/{{exam._id}}" class="list-group-item">
 			<small class="list-group-item-text">
-				Posted on
+				Criado em
 				<span data-ng-bind="exam.created | date:'medium'"></span>
-				by
+				por
 				<span data-ng-bind="exam.user.displayName"></span>
 			</small>
 			<h4 class="list-group-item-heading" data-ng-bind="exam.name"></h4>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!exams.$resolved || exams.length">
-    	No Exams yet, why don't you <a href="/#!/exams/create">create one</a>?
+    	Nenhum exame cadastrado, deseja <a href="/#!/exams/create">criar um</a>?
     </div>
 </section>

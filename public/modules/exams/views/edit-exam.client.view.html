@@ -1,18 +1,36 @@
 <section data-ng-controller="ExamsController" data-ng-init="findOne()">
     <div class="page-header">
-        <h1>Edit Exam</h1>
+        <h1>Alteração do Exame</h1>
     </div>
     <div class="col-md-12">
         <form class="form-horizontal" data-ng-submit="update()" novalidate>
             <fieldset>
                 <div class="form-group">
-                    <label class="control-label" for="name">Name</label>
+                    <label class="control-label" for="name">Nome do paciente</label>
                     <div class="controls">
                         <input type="text" data-ng-model="exam.name" id="name" class="form-control" placeholder="Name" required>
                     </div>
+                    <label class="control-label" for="age">Idade</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="exam.age" id="age" class="form-control" placeholder="Idade" required>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Update" class="btn btn-default">
+                    <label class="control-label" for="doctorName">Médico</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="exam.doctorName" id="doctorName" class="form-control" placeholder="Médico" required>
+                    </div>
+                    <label class="control-label" for="reason">Motivo</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="exam.reason" id="reason" class="form-control" placeholder="Motivo da solicitação" required>
+                    </div>
+                    <label class="control-label" for="healthPlan">Convênio</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="exam.healthPlan" id="healthPlan" class="form-control" placeholder="Plano de saúde" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Atualizar" class="btn btn-default">
                 </div>
 				<div data-ng-show="error" class="text-danger">
 					<strong data-ng-bind="error"></strong>
