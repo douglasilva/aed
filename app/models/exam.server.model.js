@@ -23,7 +23,7 @@ var ExamSchema = new Schema({
 	doctorName: {
 		type: String,
 		default: '',
-		required: 'Por favor informe o nome do médico solicitante',
+		required: 'Por favor informe o nome do mÃ©dico solicitante',
 		trim: true
 	},
 	reason: {
@@ -35,7 +35,12 @@ var ExamSchema = new Schema({
 	healthPlan: {
 		type: String,
 		default: '',
-		required: 'Por favor informe o plano de saúde',
+		required: 'Por favor informe o plano de saÃºde',
+		trim: true
+	},
+	report: {
+		type: String,
+		default: '',
 		trim: true
 	},
 	created: {

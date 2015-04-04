@@ -13,7 +13,8 @@ angular.module('exams').controller('ExamsController', ['$scope', '$stateParams',
 				age: this.age,
 				doctorName: this.doctorName,
 				reason: this.reason,
-				healthPlan: this.healthPlan
+				healthPlan: this.healthPlan,
+				report: this.report
 			});
 
 			// Redirect after save

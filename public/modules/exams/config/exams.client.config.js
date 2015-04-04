@@ -1,6 +1,6 @@
 'use strict';
 
-// Configuring the Articles module
+// Configuring the Exam module
 angular.module('exams').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
