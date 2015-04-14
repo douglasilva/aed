@@ -10,4 +10,16 @@ angular.module('exams').factory('Exams', ['$resource',
 			}
 		});
 	}
-]);
+]).factory('foo', function($http) {
+
+	var foo = {};
+
+	foo.getExamTypes = function() {
+		return $http.get('/examtypes')
+			.success(function (d) {
+				return d;
+			});
+	};
+
+	return foo;
+});

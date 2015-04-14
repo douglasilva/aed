@@ -16,6 +16,10 @@ var ExamSchema = new Schema({
 		required: 'Por favor informe o nome do paciente',
 		trim: true
 	},
+	date:{
+		type: Date,
+		required: 'Por favor informe a data do exame'
+	},
 	age: {
 		type: Number,
 		required: 'Por favor informe a idade do paciente'
@@ -38,10 +42,20 @@ var ExamSchema = new Schema({
 		required: 'Por favor informe o plano de saúde',
 		trim: true
 	},
+	examType: {
+		type: [{ type: Schema.ObjectId, ref: 'examtype' }]
+	},
 	report: {
 		type: String,
 		default: '',
 		trim: true
+	},
+	status: {
+		type: [{
+			type: String,
+			enum: ['A', 'C', 'F']
+		}],
+		default: ['A']
 	},
 	created: {
 		type: Date,

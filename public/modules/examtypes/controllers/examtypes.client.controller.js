@@ -9,7 +9,8 @@ angular.module('examtypes').controller('ExamtypesController', ['$scope', '$state
 		$scope.create = function() {
 			// Create new Examtype object
 			var examtype = new Examtypes ({
-				name: this.name
+				name: this.name,
+				report: this.report
 			});
 
 			// Redirect after save
@@ -18,6 +19,7 @@ angular.module('examtypes').controller('ExamtypesController', ['$scope', '$state
 
 				// Clear form fields
 				$scope.name = '';
+				$scope.report = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

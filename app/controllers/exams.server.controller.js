@@ -91,6 +91,7 @@ exports.examByID = function(req, res, next, id) {
 	Exam.findById(id).populate('user', 'displayName').exec(function(err, exam) {
 		if (err) return next(err);
 		if (! exam) return next(new Error('Failed to load Exam ' + id));
+
 		req.exam = exam ;
 		next();
 	});

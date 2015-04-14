@@ -13,7 +13,12 @@ var ExamtypeSchema = new Schema({
 	name: {
 		type: String,
 		default: '',
-		required: 'Please fill Examtype name',
+		required: 'Por favor informe o nome do tipo de exame',
+		trim: true
+	},
+	report: {
+		type: String,
+		default: '',
 		trim: true
 	},
 	created: {

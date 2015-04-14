@@ -1,9 +1,14 @@
 'use strict';
 
 // Exams controller
-angular.module('exams').controller('ExamsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Exams',
-	function($scope, $stateParams, $location, Authentication, Exams) {
+angular.module('exams').controller('ExamsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Exams', 'foo',
+	function($scope, $stateParams, $location, Authentication, Exams, foo) {
+
 		$scope.authentication = Authentication;
+
+		$scope.example = {
+			value: new Date(2013, 9, 22)
+		};
 
 		// Create new Exam
 		$scope.create = function() {
@@ -11,10 +16,13 @@ angular.module('exams').controller('ExamsController', ['$scope', '$stateParams',
 			var exam = new Exams ({
 				name: this.name,
 				age: this.age,
+				date: this.date,
 				doctorName: this.doctorName,
 				reason: this.reason,
 				healthPlan: this.healthPlan,
-				report: this.report
+				report: this.report,
+				examType: this.examType,
+				status: this.status
 			});
 
 			// Redirect after save
@@ -67,5 +75,21 @@ angular.module('exams').controller('ExamsController', ['$scope', '$stateParams',
 				examId: $stateParams.examId
 			});
 		};
+
+		$scope.createInit = function() {
+			foo.getExamTypes()
+				.success(function (types) {
+					$scope.examtypes = types;
+				})
+				.error(function (error) {
+					$scope.status = 'Unable to load customer data: ' + error.message;
+				});
+		};
+
+		$scope.update = function() {
+			console.log($scope.examType);
+			// use $scope.selectedItem.code and $scope.selectedItem.name here
+			// for other stuff ...
+		}
 	}
 ]);
