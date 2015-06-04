@@ -6,10 +6,6 @@ angular.module('exams').controller('ExamsController', ['$scope', '$stateParams',
 
 		$scope.authentication = Authentication;
 
-		$scope.example = {
-			value: new Date(2013, 9, 22)
-		};
-
 		// Create new Exam
 		$scope.create = function() {
 			// Create new Exam object
@@ -85,11 +81,5 @@ angular.module('exams').controller('ExamsController', ['$scope', '$stateParams',
 					$scope.status = 'Unable to load customer data: ' + error.message;
 				});
 		};
-
-		$scope.update = function() {
-			console.log($scope.examType);
-			// use $scope.selectedItem.code and $scope.selectedItem.name here
-			// for other stuff ...
-		}
 	}
 ]);

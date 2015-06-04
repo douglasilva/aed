@@ -17,7 +17,7 @@ var ExamSchema = new Schema({
 		trim: true
 	},
 	date:{
-		type: Date,
+		type: String,
 		required: 'Por favor informe a data do exame'
 	},
 	age: {

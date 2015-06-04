@@ -1,0 +1,18 @@
+<section data-ng-controller="ImpexcelsController">
+    <div class="page-header">
+        <h1>Importação de Pacientes</h1>
+    </div>
+    <div>
+        <form enctype="multipart/form-data" onupload="onUpload" method="post" action="/impexcels" role="form">
+            <div class="form-group">
+                <label for="arquivo">Arquivo de importação de pacientes</label>
+                <div class="input-group">
+                    <input type="file" class="form-control" placeholder="Planilha dos pacientes" id="arquivo" name="arquivo">
+                    <span class="input-group-btn">
+                       <button class="btn btn-default" type="submit">Importar</button>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

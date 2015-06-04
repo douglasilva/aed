@@ -21,6 +21,7 @@ var fs = require('fs'),
 	flash = require('connect-flash'),
 	config = require('./config'),
 	consolidate = require('consolidate'),
+	multer = require('multer'),
 	path = require('path');
 
 module.exports = function(db) {
@@ -108,6 +109,14 @@ module.exports = function(db) {
 	app.use(helmet.xssFilter());
 	app.use(helmet.nosniff());
 	app.use(helmet.ienoopen());
+
+	var cdir = path.resolve('./tmp');
+	app.use(multer(
+		{
+			dest: cdir,
+			inMemory:false
+		})
+	);
 	app.disable('x-powered-by');
 
 	// Setting the app router and static folder

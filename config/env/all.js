@@ -21,6 +21,7 @@ module.exports = {
 			js: [
 				'public/lib/rangy/rangy-core.min.js',
 				'public/lib/rangy/rangy-selectionsaverestore.min.js',
+				'public/lib/moment/moment.js',
 				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.js', 
 				'public/lib/angular-cookies/angular-cookies.js', 
@@ -31,7 +32,8 @@ module.exports = {
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/textAngular/dist/textAngular-sanitize.min.js',
-				'public/lib/textAngular/dist/textAngular.min.js'
+				'public/lib/textAngular/dist/textAngular.min.js',
+				'public/lib/angular-file-upload/angular-file-upload.min.js'
 			]
 		},
 		css: [

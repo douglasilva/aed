@@ -1,5 +1,5 @@
 {
-  "name": "aed",
+  "name": "A&D",
   "version": "0.0.1",
   "description": "Sistema de controle de laudos radiológicos",
   "dependencies": {
@@ -15,6 +15,7 @@
     "angular-ui-utils": "~0.1.1",
     "angular-ui-router": "~0.2.11",
     "textAngular": "~1.3.11",
-    "moment": "~2.10.2"
+    "moment": "~2.10.2",
+    "angular-file-upload": "~1.1.5"
   }
 }

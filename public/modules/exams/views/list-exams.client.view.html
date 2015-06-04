@@ -3,7 +3,11 @@
         <h1>Exames</h1>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="exam in exams" data-ng-href="#!/exams/{{exam._id}}" class="list-group-item">
+        <a class="btn btn-primary" href="/#!/exams/create">
+            <i class="glyphicon glyphicon-plus"></i>
+        </a>
+        <p></p>
+        <a data-ng-repeat="exam in exams" data-ng-href="#!/exams/{{exam._id}}/edit" class="list-group-item">
 			<small class="list-group-item-text">
 				Criado em
 				<span data-ng-bind="exam.created | date:'medium'"></span>
